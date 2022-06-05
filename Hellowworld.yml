@@ -2,10 +2,10 @@
 - name: This is a File Write & Read
   hosts: 10.100.152.118
   tasks:
-    - name: Create a file called '/home/bharath/testfile.txt' with the content 'hello world'.
-      copy:
-        content: Hi This is My Text 
-        dest: ~/testfile.txt
+    - name: Creating a file with content
+      file:
+        path: "~/testfile.txt"
+        state: touch
 
     - name: Get the testfile 
       shell: cat ~/testfile.txt
