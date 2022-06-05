@@ -1,9 +1,12 @@
 ---
-- name: This is a hello-world example
-  hosts: 172.16.228.129
+- name: This is a File Write & Read
+  hosts: 10.100.152.118
   tasks:
     - name: Create a file called '/home/bharath/testfile.txt' with the content 'hello world'.
       copy:
         content: hello worldn
-        dest: /home/bharath/testfile.txt
+        dest: ~/testfile.txt
+
+    - name: Get the testfile 
+      shell: cat ~/testfile.txt
 
