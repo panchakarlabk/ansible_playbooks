@@ -1,6 +1,6 @@
 ---
 - name: This is a File Write & Read
-  hosts: 10.100.152.118
+  hosts: localhost
 
   tasks:
     - name: Display the file
