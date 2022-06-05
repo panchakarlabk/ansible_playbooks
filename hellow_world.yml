@@ -1,6 +1,6 @@
 ---
 - name: Hello World Sample
-  hosts: inventory
+  hosts: 10.100.152.100
   tasks:
     - name: Hello Message
       debug:
