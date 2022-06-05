@@ -4,7 +4,7 @@
   tasks:
     - name: Creating a file with content
       file:
-        path: "/home/bharat/testfile.txt"
+        path: "/home/bharath/testfile.txt"
         state: touch
 
     - name: Get the testfile 
