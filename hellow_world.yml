@@ -4,6 +4,6 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World! this is git Commit"
+        msg: "Hello World! this is git Commit   new commit "
 
 
