@@ -1,9 +1,9 @@
 ---
 - name: Hello World Sample
-  hosts: 172.16.228.129
+  hosts: all
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        msg: "Hello World! this is git hub"
 
 
