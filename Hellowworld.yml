@@ -3,6 +3,11 @@
   hosts: localhost
 
   tasks:
+    
+    - name: Hello Message
+      debug:
+        msg: "Hello World! this is git Commit   new commit "
+        
     - name: Display the file
       shell: /home/bharath/testfile.txt
         
