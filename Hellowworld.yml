@@ -1,11 +1,13 @@
 ---
 - name: This is a File Write & Read
   hosts: 10.100.152.118
+  
   tasks:
     - name: Creating a file with content
       file:
         path: "/home/bharath/testfile.txt"
         state: touch
+      become: yes
 
     - name: Get the testfile 
       shell: cat /home/bharath/testfile.txt
