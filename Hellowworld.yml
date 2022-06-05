@@ -4,7 +4,7 @@
   tasks:
     - name: Create a file called '/home/bharath/testfile.txt' with the content 'hello world'.
       copy:
-        content: hello worldn
+        content: Hi This is My Text 
         dest: ~/testfile.txt
 
     - name: Get the testfile 
