@@ -5,10 +5,7 @@
   tasks:
     - name: Display the file
       shell: /home/bharath/testfile.txt
-      register: displaylist
         
-    - debug: msg="{{displaylist.stdout_lines}}"
-
     - name: Get the testfile 
       shell: cat /home/bharath/testfile.txt
 
