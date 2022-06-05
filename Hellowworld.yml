@@ -4,9 +4,9 @@
   tasks:
     - name: Creating a file with content
       file:
-        path: "~/testfile.txt"
+        path: "/home/bharat/testfile.txt"
         state: touch
 
     - name: Get the testfile 
-      shell: cat ~/testfile.txt
+      shell: cat /home/bharath/testfile.txt
 
