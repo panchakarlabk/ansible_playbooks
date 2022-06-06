@@ -8,7 +8,7 @@
 
     - name: Getting the definition of awesome
       uri:
-        url: https://api.chucknorris.io/jokes/random
+        url: https://10.100.152.118:/api/v2/jobs/26
         method: GET
       register: results
 
