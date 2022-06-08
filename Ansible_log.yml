@@ -1,7 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: 10.100.152.118
-  
+  tasks:
     - name: Ansible logs
       uri:
         url: https://10.100.152.118:/api/v2/jobs/26
