@@ -1,6 +1,6 @@
 ---
 - name: This sets up an httpd webserver
-  hosts: 10.100.152.118
+  hosts: localhost
 
   tasks:
   - name: Install apache packages 
