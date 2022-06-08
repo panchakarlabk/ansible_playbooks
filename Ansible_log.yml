@@ -4,7 +4,7 @@
   tasks:
     - name: Ansible logs
       uri:
-        url: https://10.100.152.118:/api/v2/jobs/26
+        url: -k -L https://10.100.152.118:/api/v2/jobs/26
         user: "admin"
         password: "Bharath_009"
         method: GET
