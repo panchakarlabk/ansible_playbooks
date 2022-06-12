@@ -1,0 +1,21 @@
+- hosts:
+    - localhost
+  tasks:
+    - name: Send Emails to a bunch of users, with Playbook Report as an attachment.
+      mail:
+        host: localhost
+        port: 25
+        subject: Ansible Playbook Report
+        body: This is an Email generated using Ansible after execution of task.
+        from: from-email@domain (Ansible Automates)
+        to:
+        - to-email-name-1 <to-email-1@domain>
+        - to-email-name-2 <to-email-1@domain>
+        cc: cc-name <cc-email@domain>
+        attach:
+        - <enter-path-of-your-file-to-be-attached>
+        headers:
+        - Reply-To=reply-to-email@domain
+        - X-Special="Write something special about this Email"
+        charset: us-ascii
+      delegate_to: localhost
