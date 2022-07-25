@@ -1,14 +1,9 @@
 ---
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World! this is git Commit   new commit "
+# This playbook uses the win_ping module to test connectivity to Windows hosts
+- name: Ping 
+  hosts: all 
 
-    # - name: List running jobs for the testing.yml playbook
-    #   tower_job_list:
-    #     status: running
-    #     query: {"playbook": "testing.yml"}
-    #     register: testing_jobs
-    #     tower_config_file: "~/tower_cli.cfg"
+  tasks:
+  - name: ping
+    win_ping:
+
