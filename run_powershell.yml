@@ -1,9 +1,13 @@
 ---
 # This playbook tests the script module on Windows hosts
-
 - name: Run powershell script
   hosts: all 
   gather_facts: false
+
   tasks:
+  
+    - name: Execute a command in the remote shell, stdout goes to the specified file on the remote
+      ansible.windows.win_shell: files/helloworld.ps1
+
     - name: Run powershell script
       script: files/helloworld.ps1
