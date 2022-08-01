@@ -1,0 +1,9 @@
+---
+- name: Install AD from an MSI 
+  hosts: all 
+ 
+  tasks:
+    - name: Install MSI
+      win_package: 
+        path: 'C:\Users\ansible\Downloads\AzureADConnect.msi'
+        state: present
