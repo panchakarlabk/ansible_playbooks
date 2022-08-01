@@ -7,4 +7,4 @@
       win_domain_computer:
          name: EC3
          state: absent
-      delegate_to: WIN-SKS85NBQU1H.mylab.com
+      delegate_to: mylab.com
