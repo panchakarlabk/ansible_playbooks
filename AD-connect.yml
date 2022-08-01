@@ -3,11 +3,7 @@
   hosts: all 
  
   tasks:
-    - name: Install MSI
-      win_package: 
-        path: 'C:\Users\ansible\Downloads\AzureADConnect.msi'
-        state: present
-    - name: Remove linux computer from Active Directory using a windows machine
+    - name: Remove EC3 computer from Active Directory using a windows machine
       win_domain_computer:
          name: EC3
          state: absent
