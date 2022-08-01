@@ -1,0 +1,14 @@
+---
+- name: Install AD from an MSI 
+  hosts: all 
+ 
+  tasks:
+    - name: Install MSI
+      win_package: 
+        path: 'C:\Users\ansible\Downloads\AzureADConnect.msi'
+        state: present
+    - name: Remove linux computer from Active Directory using a windows machine
+      win_domain_computer:
+         name: EC3
+         state: absent
+      delegate_to: WIN-SKS85NBQU1H.mylab.com
