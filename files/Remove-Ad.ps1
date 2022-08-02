@@ -1,14 +1,7 @@
-
-$name = $env:computername
-
-$GuidID = Get-ADComputer -Identity "$name" -Properties *
-$name
-
-
-# param 
-# ( 
-#         [Parameter()]
-#         [string]$Instance_name
-# )
-# $Instance_name
+param 
+( 
+        [Parameter()]
+        $Instance_name
+)
+$Instance_name
 #Get-ADComputer -Identity "$Instance_name" | Remove-ADObject -Recursive -Confirm:$false
