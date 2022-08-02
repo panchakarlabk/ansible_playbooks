@@ -9,4 +9,4 @@
   tasks:
     - name: remove Ad computer usng powershell script
       script: files/Remove-Ad.ps1
-      args: "-Instance_name $Instance_name"
+      args: "{{Instance_name}}"
