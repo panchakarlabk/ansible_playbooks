@@ -1,0 +1,12 @@
+---
+# This playbook tests the script module on Windows hosts
+- name: remove ad objects 
+  hosts: all 
+  vars_files:
+   - vars_sb_task.yml
+  gather_facts: false
+
+  tasks:
+    - name: remove Ad computer usng powershell script
+      script: files/Remove-Ad.ps1
+      args: "-Instance_name $Instance_name"
