@@ -9,7 +9,7 @@
   tasks: 
     - name: Ensure user ec3 is absent
       win_domain_computer:
-        name: ec3
+        name: testcp
         state: present
         dns_hostname: newhost.ansible.local
         ou: 'OU=myOU,DC=mylab,DC=com'
