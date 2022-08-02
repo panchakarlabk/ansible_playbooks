@@ -1,6 +1,6 @@
 param 
 ( 
-        [Parameter(Mandatory=$True,Position=1)]
+        [Parameter()]
         [string]$Instance_name
 )
 $Instance_name
