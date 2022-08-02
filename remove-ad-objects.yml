@@ -1,9 +1,7 @@
 ---
 # This playbook tests the script module on Windows hosts
 - name: remove ad objects 
-  hosts: all 
-  vars:
-    Instance_name: testcmp
+  hosts: all
   gather_facts: false
 
   tasks:
