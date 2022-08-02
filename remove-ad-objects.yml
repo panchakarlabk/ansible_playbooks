@@ -15,14 +15,10 @@
         ou: 'OU=myOU,DC=mylab,DC=com'
       register: computer_status
 
-    # - name: Remove linux computer from Active Directory using a windows machine
-    #   community.windows.win_domain_computer:
-    #     name: ec3
-    #     state: absent
-    #   delegate_to: mylab.com
+    - name: remove Ad computer usng powershell script
+      script: files/Remove-Ad.ps1 testcp
+      when: computer_status.exists == false
 
-    # - name: remove Ad computer usng powershell script
-    #   script: files/Remove-Ad.ps1 testcmp
       #args: "{{Instance_name}}"
       #vars:
         #name_tag: "instances[*].tags.name"
