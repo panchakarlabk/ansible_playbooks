@@ -6,9 +6,14 @@
     Instance_name: testcmp
   gather_facts: false
 
-  tasks:
-    - name: remove Ad computer usng powershell script
-      script: files/Remove-Ad.ps1 testcmp
+  tasks: 
+    - name: Ensure user bob is absent
+      win_domain_user:
+        name: bob
+        state: absent
+
+    # - name: remove Ad computer usng powershell script
+    #   script: files/Remove-Ad.ps1 testcmp
       #args: "{{Instance_name}}"
       #vars:
         #name_tag: "instances[*].tags.name"
