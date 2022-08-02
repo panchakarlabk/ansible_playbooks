@@ -10,8 +10,5 @@
     - name: remove Ad computer usng powershell script
       script: files/Remove-Ad.ps1 testcmp
       #args: "{{Instance_name}}"
-      #register: _out
-
-
-       #vars:
+      #vars:
         #name_tag: "instances[*].tags.name"
