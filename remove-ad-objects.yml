@@ -12,6 +12,7 @@
         name: ec3
         state: present
         dns_hostname: newhost.ansible.local
+        ou: 'OU=myOU,DC=mylab,DC=com'
       register: computer_status
 
     # - name: Remove linux computer from Active Directory using a windows machine
