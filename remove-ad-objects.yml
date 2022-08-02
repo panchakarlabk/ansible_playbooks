@@ -19,6 +19,12 @@
       script: files/Remove-Ad.ps1 bob
       when: computer_status.exists == false
 
+    # - name: Remove linux computer from Active Directory using a windows machine
+    #   win_domain_computer:
+    #     name: one_linux_server
+    #     state: absent
+    #   delegate_to: my_windows_bridge.my_org.local
+
       #args: "{{Instance_name}}"
       #vars:
         #name_tag: "instances[*].tags.name"
