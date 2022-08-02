@@ -7,7 +7,7 @@
   gather_facts: false
 
   tasks: 
-    - name: Ensure user bob is absent
+    - name: Ensure user ec3 is absent
       win_domain_computer:
         name: ec3
         state: present
