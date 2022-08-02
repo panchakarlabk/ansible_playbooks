@@ -7,16 +7,17 @@
   gather_facts: false
 
   tasks: 
-    # - name: Ensure user bob is absent
-    #   win_domain_user:
-    #     name: bob
-    #     state: absent
-
-    - name: Remove linux computer from Active Directory using a windows machine
-      community.windows.win_domain_computer:
+    - name: Ensure user bob is absent
+      win_domain_computer:
         name: ec3
-        state: absent
-      delegate_to: mylab.com
+        state: present
+      register: computer_status
+
+    # - name: Remove linux computer from Active Directory using a windows machine
+    #   community.windows.win_domain_computer:
+    #     name: ec3
+    #     state: absent
+    #   delegate_to: mylab.com
 
     # - name: remove Ad computer usng powershell script
     #   script: files/Remove-Ad.ps1 testcmp
