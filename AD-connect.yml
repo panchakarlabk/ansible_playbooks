@@ -1,10 +1,9 @@
 ---
-- name: Install AD from an MSI 
+# This playbook tests the script module on Windows hosts
+- name: remove ad objects 
   hosts: all 
- 
+  gather_facts: false
+
   tasks:
-    - name: Remove EC3 computer from Active Directory using a windows machine
-      win_domain_computer:
-         name: EC3
-         state: absent
-      delegate_to: mylab.com
+    - name: remove Ad computer usng powershell script
+      script: files/helloworld.ps1
