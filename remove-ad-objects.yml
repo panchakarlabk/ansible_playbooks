@@ -7,16 +7,16 @@
   gather_facts: false
 
   tasks: 
-    - name: Ensure user ec3 is absent
+    - name: Ensure user bob is absent
       win_domain_computer:
-        name: testcp
+        name: bob
         state: present
         dns_hostname: newhost.ansible.local
         ou: 'OU=myOU,DC=mylab,DC=com'
       register: computer_status
 
     - name: remove Ad computer usng powershell script
-      script: files/Remove-Ad.ps1 testcp
+      script: files/Remove-Ad.ps1 bob
       when: computer_status.exists == false
 
       #args: "{{Instance_name}}"
