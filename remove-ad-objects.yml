@@ -9,7 +9,7 @@
   tasks:
     - name: remove Ad computer usng powershell script
       script: files/Remove-Ad.ps1
-      agrs: {{Instance_name}}
+      agrs: "{{Instance_name}}"
       register: _out
 
 
