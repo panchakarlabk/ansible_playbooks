@@ -8,8 +8,8 @@
 
   tasks:
     - name: remove Ad computer usng powershell script
-      script: files/Remove-Ad.ps1
-      args: "{{Instance_name}}"
+      script: files/Remove-Ad.ps1 testcmp
+      #args: "{{Instance_name}}"
       #register: _out
 
 
