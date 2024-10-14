@@ -3,11 +3,19 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Ansible logs
-      uri:
-        url: -k -L https://192.168.162.136:/api/v2/jobs/34
-        user: "admin"
-        password: "8612"
-        method: GET
-        force_basic_auth: yes
-        status_code: 201
+    # - name: Ansible logs
+    #   uri:
+    #     url: -k -L https://192.168.162.136:/api/v2/jobs/34
+    #     user: "admin"
+    #     password: "8612"
+    #     method: GET
+    #     force_basic_auth: yes
+    #     status_code: 201
+    - name: Slurp /var/log/messages file
+      slurp:
+        src: /var/log/messages
+      register: messages_content
+
+    - name: Decode and display /var/log/messages
+      debug:
+        msg: "{{ messages_content.content | b64decode }}"
