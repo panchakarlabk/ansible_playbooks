@@ -1,7 +1,6 @@
 ---
 - name: get Logs Ansible automation Job templet 
   hosts: all
-  become: true
   tasks:
     - name: Ansible logs
       uri:
