@@ -1,12 +1,12 @@
 ---
-- name: Hello World Sample
-  hosts: 10.100.152.118
+- name: get Logs Ansible automation Job templet 
+  hosts: all
   tasks:
     - name: Ansible logs
       uri:
-        url: -k -L https://10.100.152.118:/api/v2/jobs/26
+        url: -k -L https://192.168.162.136:/api/v2/jobs/34
         user: "admin"
-        password: "Bharath_009"
+        password: "8612"
         method: GET
         force_basic_auth: yes
         status_code: 201
